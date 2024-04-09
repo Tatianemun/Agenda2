@@ -11,32 +11,29 @@
     <?php
     //teste do php
     echo"PHP funcionando!"."<br>";
-
+    ?>
+    <?php
+    
     //inclui um arquivo php
     include 'conecta.php';
-
-    
-    //consulta ao banco de dados
+  
+   
 
     $sql = "SELECT * FROM agenda";
-$result = $conn->query($sql);
-
-if ($result->num_rows > 0) {
-  // output data of each row
-  while($row = $result->fetch_assoc()) {
-    echo "id: " . $row["id"]. " - Nome: " . $row["nome"]. " " - Telefone: " . $row["telefone"]. "<br>";
-  }
-} else {
-  echo "0 results";
-}
-$conn->close();
-
+    $result = $conn->query($sql);
+    
+    if ($result->num_rows > 0) {
+        echo "<table border='1'>";
+        echo "<tr><th>Nome</th><th>Telefone</th></tr>";
+        while($row = $result->fetch_assoc()) {
+            echo "<tr><td>".$row["Nome"]."</td><td>".$row["Telefone"]."</td></tr>";
+        }
+        echo "</table>";
+    } else {
+        echo "Nenhum contato encontrado";
+    }
+    $conn->close();
     ?>
-    <img src="agendadecontatos.png" alt="imagem de uma agenda de contatos">
-    <button type="button">Consultar Agenda</button>
-    <p>ID: NOME: TELEFONE:</p>
-    <p id="agenda">...</p>
-
     <p>produzido por: Tatiane Muniz</p>
 </body>
 </html>

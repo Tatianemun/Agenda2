@@ -1,7 +1,7 @@
 <?php
     $servidor="localhost";
-    $usuario="escola2";
-    $senha="123";
+    $usuario="root";
+    $senha="";
     $nomedodb="escola2";
 
     $conn=new mysqli($servidor,$usuario,$senha,$nomedodb);
