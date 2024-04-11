@@ -35,6 +35,6 @@
     }
     $conn->close();
     ?>
-    <p>produzido por: Tatiane Muniz</p>
+    <p>Produzido por: Tatiane Muniz</p>
 </body>
 </html>
