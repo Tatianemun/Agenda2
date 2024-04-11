@@ -12,8 +12,9 @@
     //teste do php
     echo"PHP funcionando!"."<br>";
     ?>
+    <a href="cadastrar.php">Cadastrar</a><br><br>
     <?php
-    
+
     //inclui um arquivo php
     include 'conecta.php';
   
