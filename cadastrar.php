@@ -10,7 +10,7 @@
     <?php
         include 'conecta.php';
     ?>
-    <a href="index.php"></a><br><br>
+    <a href="index.php">Contatos</a><br><br>
     <h1>Cadastro novo contato</h1>
     <form action="cadastrar.php">
         <label for="fname">Nome:</label><br>
